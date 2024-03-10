@@ -23,7 +23,8 @@ export function getBlankLine(word) {
   return final;
 }
 
-export function getAllGuesses(guessedLetters, word) {
+//
+export function showUserGuesses(guessedLetters, word) {
   let splitWord = word.toUpperCase().split("")
   let finalArr = []
   console.log("splitword", splitWord)
@@ -43,6 +44,7 @@ export function getAllGuesses(guessedLetters, word) {
   console.log("finalArr",finalArr)
   return finalArr.join(',')
 }
+
 
 //Refreshes the screen and loads a new game for the user
 export function loadNewGame() {
