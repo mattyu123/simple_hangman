@@ -1,50 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./script.js"></script>
-  <script type="module" src="./helperFunctions.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./helperFunctions.js"></script>
+  </head>
 
-<body>
-  <h1 id="header">Beginner Hangman Game</h1>  
-  <p>Hello, and welcome to my beginner hangman game. Click on the box to make a guess. You will have 5 tries total to guess the entire word. </p>
-  <div class="letter-buttons">
-    <button class="individual-letter-button" type="button">A</button>
-    <button class="individual-letter-button" type="button">B</button>
-    <button class="individual-letter-button" type="button">C</button>
-    <button class="individual-letter-button" type="button">D</button>
-    <button class="individual-letter-button" type="button">E</button>
-    <button class="individual-letter-button" type="button">F</button>
-    <button class="individual-letter-button" type="button">G</button>
-    <button class="individual-letter-button" type="button">H</button>
-    <button class="individual-letter-button" type="button">I</button>
-    <button class="individual-letter-button" type="button">J</button>
-    <button class="individual-letter-button" type="button">K</button>
-    <button class="individual-letter-button" type="button">L</button>
-    <button class="individual-letter-button" type="button">M</button>
-    <button class="individual-letter-button" type="button">N</button>
-    <button class="individual-letter-button" type="button">O</button>
-    <button class="individual-letter-button" type="button">P</button>
-    <button class="individual-letter-button" type="button">Q</button>
-    <button class="individual-letter-button" type="button">R</button>
-    <button class="individual-letter-button" type="button">S</button>
-    <button class="individual-letter-button" type="button">T</button>
-    <button class="individual-letter-button" type="button">U</button>
-    <button class="individual-letter-button" type="button">V</button>
-    <button class="individual-letter-button" type="button">W</button>
-    <button class="individual-letter-button" type="button">X</button>
-    <button class="individual-letter-button" type="button">Y</button>
-    <button class="individual-letter-button" type="button">Z</button>
-  </div>
-  <div id="blank-word" class="selected-word-display">
-  </div>
-  <button onclick="loadNewGame()" type="button">
-    New Game
-  </button>
-
-</body>
+  <body>
+    <h1 id="header">Beginner Hangman Game</h1>
+    <p>
+      Hello, and welcome to my beginner hangman game. Click on the box to make a
+      guess. You will have 5 tries total to guess the entire word.
+    </p>
+    <div class="letter-buttons">
+      <button class="individual-letter-button" type="button" value="A">
+        A
+      </button>
+      <button class="individual-letter-button" type="button" value="B">
+        B
+      </button>
+      <button class="individual-letter-button" type="button" value="C">
+        C
+      </button>
+      <button class="individual-letter-button" type="button" value="D">
+        D
+      </button>
+      <button class="individual-letter-button" type="button" value="E">
+        E
+      </button>
+      <button class="individual-letter-button" type="button" value="F">
+        F
+      </button>
+      <button class="individual-letter-button" type="button" value="G">
+        G
+      </button>
+      <button class="individual-letter-button" type="button" value="H">
+        H
+      </button>
+      <button class="individual-letter-button" type="button" value="I">
+        I
+      </button>
+      <button class="individual-letter-button" type="button" value="J">
+        J
+      </button>
+      <button class="individual-letter-button" type="button" value="K">
+        K
+      </button>
+      <button class="individual-letter-button" type="button" value="L">
+        L
+      </button>
+      <button class="individual-letter-button" type="button" value="M">
+        M
+      </button>
+      <button class="individual-letter-button" type="button" value="N">
+        N
+      </button>
+      <button class="individual-letter-button" type="button" value="O">
+        O
+      </button>
+      <button class="individual-letter-button" type="button" value="P">
+        P
+      </button>
+      <button class="individual-letter-button" type="button" value="Q">
+        Q
+      </button>
+      <button class="individual-letter-button" type="button" value="R">
+        R
+      </button>
+      <button class="individual-letter-button" type="button" value="S">
+        S
+      </button>
+      <button class="individual-letter-button" type="button" value="T">
+        T
+      </button>
+      <button class="individual-letter-button" type="button" value="U">
+        U
+      </button>
+      <button class="individual-letter-button" type="button" value="V">
+        V
+      </button>
+      <button class="individual-letter-button" type="button" value="W">
+        W
+      </button>
+      <button class="individual-letter-button" type="button" value="X">
+        X
+      </button>
+      <button class="individual-letter-button" type="button" value="Y">
+        Y
+      </button>
+      <button class="individual-letter-button" type="button" value="Z">
+        Z
+      </button>
+    </div>
+    <div id="blank-word" class="selected-word-display"></div>
+    <h3>Guessed Letters</h3>
+    <div id="guessed-letters"></div>
+    <button onclick="loadNewGame()" type="button">New Game</button>
+  </body>
 </html>

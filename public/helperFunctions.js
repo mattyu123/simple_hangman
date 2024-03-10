@@ -23,10 +23,22 @@ export function getBlankLine(word) {
   return final;
 }
 
+//update the field of guessed letters
+export function updateGuessedLetters (letter) {
+  document.getElementById("guessed-letters").innerHTML = letter
+}
+
 //Refreshes the screen and loads a new game for the user
 export function loadNewGame() {
   location.reload()
 }
 
-//attach the loadNewGame to the window object
 window.loadNewGame = loadNewGame
+
+
+
+//update the state of the game with the button value
+
+
+
+//attach the loadNewGame to the window object
