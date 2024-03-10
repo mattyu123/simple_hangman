@@ -22,3 +22,11 @@ export function getBlankLine(word) {
 
   return final;
 }
+
+//Refreshes the screen and loads a new game for the user
+export function loadNewGame() {
+  location.reload()
+}
+
+//attach the loadNewGame to the window object
+window.loadNewGame = loadNewGame
