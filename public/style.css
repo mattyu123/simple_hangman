@@ -1,7 +1,15 @@
+* {
+  font-size: 16px;
+}
+
+#header {
+  font-size: 3em;
+}
+
 .this-class {
   color: red;
 }
 
-.letter-buttons {
-  
+.selected-word-display {
+  font-size: 2em;
 }

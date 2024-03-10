@@ -9,6 +9,16 @@ export function selectRandomWord(words) {
 }
 
 //takes a word and spits out blanks equivalent to how many letters
-function getBlankLine(word) {
+export function getBlankLine(word) {
+  let final = ""
 
+  for (const letter of word) {
+    if (letter === " ") {
+      final += "  "
+    } else {
+      final += "_ "
+    }
+  }
+
+  return final;
 }
