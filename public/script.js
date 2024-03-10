@@ -1,5 +1,5 @@
 // const hangman = require('./helperFunctions')
-import { selectRandomWord, getBlankLine, updateGuessedLetters } from "./helperFunctions.js"
+import { selectRandomWord, getBlankLine, getAllGuesses } from "./helperFunctions.js"
 
 const wordList = ["APPLE", "PEAR","PIZZA","SUSHI","PASTA","NOODLES","COFFEE"]
 
@@ -8,21 +8,35 @@ const selectedWord = selectRandomWord(wordList)
 console.log(selectedWord)
 
 //display the blank selected word length
-document.getElementById('blank-word').textContent = getBlankLine(selectedWord)
+document.getElementById('word-guess').textContent = getBlankLine(selectedWord)
 
 
-//Get the value of the selected button
-const selectedButtons = document.querySelectorAll('.individual-letter-button');
+//Get the value of the selected button from the button tags
+const letterButtons = document.querySelectorAll('.individual-letter-button');
 
-console.log("selectedButtons query list",selectedButtons)
+//display the list of all the guessed values here
+let clickedLetters = [];
 
+// Function to handle button click
+function handleButtonClick(event) {
+  const clickedButton = event.target;
+  const clickedLetter = clickedButton.value;
 
-selectedButtons.forEach(button => {
-  button.addEventListener('click', function() {
-      const selectedButtonValue = this.value;
-      console.log("Selected button value:", selectedButtonValue);
-      updateGuessedLetters(selectedButtonValue)
-  });
+  // Check if the letter has already been clicked
+  if (!clickedLetters.includes(clickedLetter)) {
+    clickedLetters.push(clickedLetter);
+
+    const lettersStr = clickedLetters.join(',')
+
+    //Update the DOM with all the guessed letters
+    document.getElementById("guessed-letters").innerHTML = lettersStr
+
+    //Update the DOM with letters to see if they're correct
+    document.getElementById('word-guess').textContent = getAllGuesses(clickedLetters,selectedWord)
+  }
+}
+
+// Attach click event listener to each button
+letterButtons.forEach(button => {
+  button.addEventListener('click', handleButtonClick);
 });
-
-// console.log(selectedButtonValue)
